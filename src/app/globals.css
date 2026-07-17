@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-deep: #4309AC;
+  --color-purple-night: #2E0670;
+  --color-purple-ink: #15052E;
+  --color-violet: #8D24ED;
+  --color-teal: #44E0BE;
+  --color-brass: #B8863C;
+  --color-star-yellow: #FFC93C;
+  --color-cream: #F0EFEB;
+  --color-ink: #1C1B20;
+  --color-gray-pill: #E8E5DE;
+  --color-gray-muted: #726F68;
+  --color-whatsapp: #25D366;
+  --color-white: #FFFFFF;
+
+  --font-anton: var(--font-anton);
+  --font-inter: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #F0EFEB;
+  --foreground: #1C1B20;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.font-display {
+  font-family: var(--font-anton), sans-serif;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.font-body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Subtle fadeInUp stagger animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-stagger-1 {
+    animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+  .animate-stagger-2 {
+    animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
+    opacity: 0;
+  }
+  .animate-stagger-3 {
+    animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.16s forwards;
+    opacity: 0;
+  }
+  .animate-stagger-4 {
+    animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button scaling active state */
+.btn-scale {
+  transition: transform 0.15s ease-out;
+}
+.btn-scale:active {
+  transform: scale(0.98);
+}
+
+.bg-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
